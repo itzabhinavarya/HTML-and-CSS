@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>itzabhinavarya</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: black;
+        }
+        .mainCard{
+            position: relative;
+            width: 250px;
+            height: 350px;
+            display: flex;
+            border-radius: 10px;
+            /* background-color: aquamarine; */
+            /* overflow: hidden; */
+        }
+        .circle{
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(#b0e633,#53ef7d);
+            border-radius: 50%;
+            position: absolute;
+            animation:  myAnimation 2s ease-in infinite alternate-reverse;
+        }
+        .circle:nth-child(1){
+            top: -40px;
+            left: -35px;
+        }
+        .circle:nth-child(2){
+            bottom: -40px;
+            right: -35px;
+            animation-name: secAnimation;
+        }
+
+        .card{
+            width: 250px;
+            height: 350px;
+            position: absolute;
+            /* background-color: #b0e633; */
+            z-index: 99;
+            background: transparent;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: center;
+        }
+
+        @keyframes myAnimation{
+            to{
+                /* transform: translateY( -10px); */
+                translate: 15px 20px;
+            }
+        }
+        @keyframes secAnimation{
+            to{
+                /* transform: translateY(10px); */
+                translate: -15px -20px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="mainCard">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="card"></div>
+    </div>
+</body>
+</html>

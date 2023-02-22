@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <style>
+        *{margin: 0;padding: 0;}
+
+        :root{
+            --white : #fff;
+            --black : #000;
+
+            /* --black : #fff;
+            --white : #000; */
+        }
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: var(--white);
+        }
+        .card{
+            display: flex;
+            width: 300px;
+            height: 180px;
+            background: transparent;
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); */
+            box-shadow: 0 0 10px var(--white);
+            box-shadow: 0 0 10px var(--black);
+            border-radius: 10px;
+            position: relative;
+        }
+        .circle{
+            background-color: aqua;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(70px);
+            translate: 220px 100px;
+        }
+        .circle:nth-child(2){
+            background-color: aqua;
+            translate: -220px -100px;
+        }
+        .c-name p{
+            font-size: 0.7rem;
+            position: absolute;
+            bottom: 10px;
+            left: 15px;
+            font-family:sans-serif;
+            font-weight: 500;
+            color: var(--black);
+        }
+        .c-number p{
+            font-size: 1rem;
+            position: absolute;
+            bottom: 65px;
+            left: 12px;
+            font-family:sans-serif;
+            font-weight: 700;
+            color: var(--black);
+        }
+        .valid p{
+            font-size: 0.5rem;
+            position: absolute;
+            bottom: 50px;
+            left: 15px;
+            font-family:sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--black);
+        }
+        .valid p:nth-child(2){
+            position: absolute;
+            bottom: 33px;
+            font-size: 1rem;
+            color: var(--black);
+        }
+        .round{
+            background-color: #EB001B;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            position: absolute;
+            right: 30px;
+            bottom: 10px;
+        }
+        .round2{
+            background-color: #FF5F00;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            position: absolute;
+            right: 5px;
+            bottom: 10px;
+        }
+        .logo{
+            font-family: sans-serif;
+            position: relative;
+            top: 15px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            left: 15px;
+        }
+        .logo p{
+            color: var(--black);
+        }
+        .debit p{
+            position: absolute;
+            right: 15px;
+            top: 80px;
+            font-family: sans-serif;
+            font-weight: 700;
+            color: var(--black);
+        }
+        .bar-code{
+            position: absolute;
+            top: 55px;
+            left: 30px;
+        }
+        .wifi i{
+            width: 25px;
+            position: absolute;
+            transform: rotate(85deg);
+            right: 15px;
+            top: 15px;
+            color: var(--black);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="wifi">
+            <!-- <img src="wifi.png" alt=""> -->
+            <i class="fa fa-wifi" aria-hidden="true"></i>
+        </div>
+        <div class="logo">
+            <p>platinum</p>
+        </div>
+        <div class="bar-code">
+            <svg xml:space="preserve" viewBox="0 0 50 50" height="30px" width="30px" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="Layer_1" class="chip" version="1.1">  <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+                AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAB6VBMVEUAAACNcTiVeUKVeUOY
+                fEaafEeUeUSYfEWZfEaykleyklaXe0SWekSZZjOYfEWYe0WXfUWXe0WcgEicfkiXe0SVekSXekSW
+                ekKYe0a9nF67m12ZfUWUeEaXfESVekOdgEmVeUWWekSniU+VeUKVeUOrjFKYfEWliE6WeESZe0GS
+                e0WYfES7ml2Xe0WXeESUeEOWfEWcf0eWfESXe0SXfEWYekSVeUKXfEWxklawkVaZfEWWekOUekOW
+                ekSYfESZe0eXekWYfEWZe0WZe0eVeUSWeETAnmDCoWLJpmbxy4P1zoXwyoLIpWbjvXjivnjgu3bf
+                u3beunWvkFWxkle/nmDivXiWekTnwXvkwHrCoWOuj1SXe0TEo2TDo2PlwHratnKZfEbQrWvPrWua
+                fUfbt3PJp2agg0v0zYX0zYSfgkvKp2frxX7mwHrlv3rsxn/yzIPgvHfduXWXe0XuyIDzzISsjVO1
+                lVm0lFitjVPzzIPqxX7duna0lVncuHTLqGjvyIHeuXXxyYGZfUayk1iyk1e2lln1zYTEomO2llrb
+                tnOafkjFpGSbfkfZtXLhvHfkv3nqxH3mwXujhU3KqWizlFilh06khk2fgkqsjlPHpWXJp2erjVOh
+                g0yWe0SliE+XekShhEvAn2D///+gx8TWAAAARnRSTlMACVCTtsRl7Pv7+vxkBab7pZv5+ZlL/UnU
+                /f3SJCVe+Fx39naA9/75XSMh0/3SSkia+pil/KRj7Pr662JPkrbP7OLQ0JFOijI1MwAAAAFiS0dE
+                orDd34wAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfnAg0IDx2lsiuJAAACLElEQVRIx2Ng
+                GAXkAUYmZhZWPICFmYkRVQcbOwenmzse4MbFzc6DpIGXj8PD04sA8PbhF+CFaxEU8iWkAQT8hEVg
+                OkTF/InR4eUVICYO1SIhCRMLDAoKDvFDVhUaEhwUFAjjSUlDdMiEhcOEItzdI6OiYxA6YqODIt3d
+                I2DcuDBZsBY5eVTr4xMSYcyk5BRUOXkFsBZFJTQnp6alQxgZmVloUkrKYC0qqmji2WE5EEZuWB6a
+                lKoKdi35YQUQRkFYPpFaCouKIYzi6EDitJSUlsGY5RWVRGjJLyxNy4ZxqtIqqvOxaVELQwZFZdkI
+                JVU1RSiSalAt6rUwUBdWG1CP6pT6gNqwOrgCdQyHNYR5YQFhDXj8MiK1IAeyN6aORiyBjByVTc0F
+                qBoKWpqwRCVSgilOaY2OaUPw29qjOzqLvTAchpos47u6EZyYnngUSRwpuTe6D+6qaFQdOPNLRzOM
+                1dzhRZyW+CZouHk3dWLXglFcFIflQhj9YWjJGlZcaKAVSvjyPrRQ0oQVKDAQHlYFYUwIm4gqExGm
+                BSkutaVQJeomwViTJqPK6OhCy2Q9sQBk8cY0DxjTJw0lAQWK6cOKfgNhpKK7ZMpUeF3jPa28BCET
+                amiEqJKM+X1gxvWXpoUjVIVPnwErw71nmpgiqiQGBjNzbgs3j1nus+fMndc+Cwm0T52/oNR9lsdC
+                S24ra7Tq1cbWjpXV3sHRCb1idXZ0sGdltXNxRateRwHRAACYHutzk/2I5QAAACV0RVh0ZGF0ZTpj
+                cmVhdGUAMjAyMy0wMi0xM1QwODoxNToyOSswMDowMEUnN7UAAAAldEVYdGRhdGU6bW9kaWZ5ADIw
+                MjMtMDItMTNUMDg6MTU6MjkrMDA6MDA0eo8JAAAAKHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIzLTAy
+                LTEzVDA4OjE1OjI5KzAwOjAwY2+u1gAAAABJRU5ErkJggg==" y="0" x="0" height="50" width="50" id="image0"></image>
+              </svg>
+        </div>
+        <div class="c-number">
+            <p>1234 5678 9098 7654</p>
+        </div>
+        <div class="valid">
+            <p>Valid Thru</p>
+            <p>12/25</p>
+        </div>
+        <div class="c-name">
+            <p>ABHINAV KUMAR ARYA</p>
+        </div>
+        <!-- <svg viewBox="0 0 48 48" height="36" width="36" y="0px" x="0px" xmlns="http://www.w3.org/2000/svg" class="logo"></svg> -->
+        <div class="debit">
+            <p>debit</p>
+        </div>
+        <div class="round"></div>
+        <div class="round2"></div>
+    </div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+</body>
+</html>
